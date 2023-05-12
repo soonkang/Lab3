@@ -84,6 +84,7 @@ def display_main_menu():
 
     elif option == '4':
         department = input("Name of Department = ")
+        department = department.title()
         employee_info = get_employees_by_dept(department)
         display_records(employee_info)
 
@@ -93,6 +94,7 @@ def display_main_menu():
 def main():
 
     while (True):
+
         display_main_menu()
 
 
