@@ -1,17 +1,25 @@
-from price_info import *
+import price_info
 
 
 def test_total_cost_shopping():
-    result = total_cost_shopping()
-    assert result == 46.75
+    result = price_info.total_cost_shopping()
+    assert (result == 46.75)
 
-def test_cost_of_fruits():
-    assert cost_of_fruits('apple', 5) == 6.0
-    assert cost_of_fruits('watermelon', 1) == 6.5
-    assert cost_of_fruits('pear', 10) == 9.0
+def test_cost_of_fruits_apple():
+    quantity = 20
+    expected_result = quantity * 1.20
+    result = price_info.cost_of_fruits ('apple',quntity)
+    assert (expected_result == result)
+
+def test_cost_of_fruits_orange():
+    quantity = 20
+    expected_result = quantity * 1.40
+    result = price_info.cost_of_fruits ('orange',quntity)
+    assert (expected_result == result)
 
 
-if __name__ == '__main__':
-    test_total_cost_shopping()
-    test_cost_of_fruits()
-    print('All tests passed')
+def test_cost_of_fruits_watermelon():
+    quantity = 20
+    expected_result = quantity * 6.50
+    result = price_info.cost_of_fruits ('watermelon',quntity)
+    assert (expected_result == result)
