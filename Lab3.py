@@ -13,6 +13,8 @@ def bubble_sort(arr, sorting_order):
     for i in arr:
         if type(i) is not int:
             return 2
+    if n == 0:
+        return 0
     if n < 10:
         # Traverse through all array elements
         for i in range(n - 1):
@@ -34,12 +36,12 @@ def bubble_sort(arr, sorting_order):
                 else:
                     # Return an empty array
                     arr_result = []
+
+    elif n > 10:
+        return 1
     else :
         arr_result = -1
-    if n > 10:
-        return 1
-    if n == 0:
-        return 0
+
 
 
 
@@ -48,7 +50,7 @@ def bubble_sort(arr, sorting_order):
 
 def main():
     # Driver code to test above
-    arr = ["a"]
+    arr = []
 
     # Sort in ascending order
     result = bubble_sort(arr, SORT_ASCENDING)
